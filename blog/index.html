@@ -1,14 +1,506 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Our Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Blog | Excel Coaching Center</title>
+    <meta name="description" content="Read our latest articles on study techniques, exam preparation, and academic success from Excel Coaching Center">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Blog Articles</h1>
-  <ul>
-    <li><a href="best-study-technique.html">Best Study Technique</a></li>
-    <li><a href="5-ways-to-improve-memory.html">5 Ways to Improve Memory</a></li>
-    <!-- Add more links here -->
-  </ul>
+    <!-- Header with Navigation -->
+    <header class="sticky-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo-link">
+                <img src="../images/logo.png" alt="Excel Coaching Center Logo" class="logo" width="180" height="50">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="../courses.html" class="nav-link">Courses</a></li>
+                    <li class="nav-item"><a href="../hall-of-fame.html" class="nav-link">Success Stories</a></li>
+                    <li class="nav-item"><a href="./" class="nav-link active">Blog</a></li>
+                    <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" aria-label="Mobile menu toggle" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Excel Coaching Blog</h1>
+                <p class="hero-subtitle">Expert tips, study strategies, and academic insights to help you succeed</p>
+                <div class="search-box">
+                    <form action="./search.html" method="GET" class="search-form">
+                        <input type="text" name="q" placeholder="Search articles..." class="search-input">
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Banner -->
+    <section class="ad-section">
+        <div class="container">
+            <!-- AdSense Ad Unit -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
+
+    <!-- Main Blog Content -->
+    <main class="blog-main">
+        <div class="container">
+            <div class="blog-container">
+                <!-- Featured Article -->
+                <section class="featured-article">
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="../images/blog/featured-article.jpg" alt="Featured Article: Best Study Techniques">
+                            <div class="featured-badge">Featured</div>
+                        </div>
+                        <div class="featured-content">
+                            <div class="article-meta">
+                                <span class="category-badge study-techniques">Study Techniques</span>
+                                <span class="date"><i class="far fa-calendar-alt"></i> June 15, 2024</span>
+                                <span class="reading-time"><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                            <h2 class="article-title"><a href="best-study-techniques.html">10 Scientifically Proven Study Techniques That Actually Work</a></h2>
+                            <p class="article-excerpt">Discover the most effective study methods backed by cognitive science research that can help you retain information longer and perform better on exams...</p>
+                            <a href="best-study-techniques.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Blog Categories -->
+                <section class="blog-categories">
+                    <h2 class="section-title">Browse by Category</h2>
+                    <div class="categories-grid">
+                        <a href="category/study-techniques.html" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Study Techniques</h3>
+                            <p>12 Articles</p>
+                        </a>
+                        <a href="category/exam-prep.html" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3>Exam Preparation</h3>
+                            <p>9 Articles</p>
+                        </a>
+                        <a href="category/time-management.html" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Time Management</h3>
+                            <p>7 Articles</p>
+                        </a>
+                        <a href="category/mental-health.html" class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Mental Health</h3>
+                            <p>5 Articles</p>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Latest Articles -->
+                <section class="latest-articles">
+                    <div class="section-header">
+                        <h2 class="section-title">Latest Articles</h2>
+                        <a href="archive.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="articles-grid">
+                        <!-- Article 1 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <a href="exam-preparation-tips.html">
+                                    <img src="../images/blog/exam-prep.jpg" alt="Exam Preparation Tips">
+                                </a>
+                                <span class="category-badge exam-prep">Exam Prep</span>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="date"><i class="far fa-calendar-alt"></i> June 10, 2024</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 6 min read</span>
+                                </div>
+                                <h3 class="article-title"><a href="exam-preparation-tips.html">Ultimate Guide to Last-Minute Exam Preparation</a></h3>
+                                <p class="article-excerpt">Effective strategies to maximize your study time when exams are just around the corner...</p>
+                                <a href="exam-preparation-tips.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <!-- Article 2 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <a href="time-management.html">
+                                    <img src="../images/blog/time-management.jpg" alt="Time Management for Students">
+                                </a>
+                                <span class="category-badge time-management">Time Mgmt</span>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="date"><i class="far fa-calendar-alt"></i> June 5, 2024</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h3 class="article-title"><a href="time-management.html">The Pomodoro Technique: A Student's Secret Weapon</a></h3>
+                                <p class="article-excerpt">How to use this simple time management method to boost your productivity and focus...</p>
+                                <a href="time-management.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <!-- Article 3 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <a href="5-ways-to-improve-memory.html">
+                                    <img src="../images/blog/memory.jpg" alt="Improve Memory Techniques">
+                                </a>
+                                <span class="category-badge study-techniques">Study Techniques</span>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="date"><i class="far fa-calendar-alt"></i> May 28, 2024</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 7 min read</span>
+                                </div>
+                                <h3 class="article-title"><a href="5-ways-to-improve-memory.html">5 Powerful Ways to Improve Your Memory for Studying</a></h3>
+                                <p class="article-excerpt">Science-backed techniques to enhance your memory retention and recall abilities...</p>
+                                <a href="5-ways-to-improve-memory.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <!-- Article 4 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <a href="how-to-choose-coaching.html">
+                                    <img src="../images/blog/choose-coaching.jpg" alt="Choosing Coaching Institute">
+                                </a>
+                                <span class="category-badge guidance">Guidance</span>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="date"><i class="far fa-calendar-alt"></i> May 20, 2024</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 9 min read</span>
+                                </div>
+                                <h3 class="article-title"><a href="how-to-choose-coaching.html">How to Choose the Right Coaching Institute: A Complete Checklist</a></h3>
+                                <p class="article-excerpt">Key factors to consider when selecting a coaching center for competitive exams...</p>
+                                <a href="how-to-choose-coaching.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Popular Articles -->
+                <section class="popular-articles">
+                    <h2 class="section-title">Most Popular Articles</h2>
+                    <div class="popular-articles-list">
+                        <article class="popular-article">
+                            <div class="popular-article-content">
+                                <span class="popular-badge">1</span>
+                                <div class="article-details">
+                                    <span class="category-badge exam-prep">Exam Prep</span>
+                                    <h3><a href="success-stories-2024.html">Success Stories: How Our Students Cracked JEE Advanced 2024</a></h3>
+                                    <div class="article-meta">
+                                        <span class="date"><i class="far fa-calendar-alt"></i> May 15, 2024</span>
+                                        <span class="reading-time"><i class="far fa-clock"></i> 10 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-article">
+                            <div class="popular-article-content">
+                                <span class="popular-badge">2</span>
+                                <div class="article-details">
+                                    <span class="category-badge study-techniques">Study Techniques</span>
+                                    <h3><a href="active-recall.html">Active Recall: The Most Effective Study Method You're Not Using</a></h3>
+                                    <div class="article-meta">
+                                        <span class="date"><i class="far fa-calendar-alt"></i> May 10, 2024</span>
+                                        <span class="reading-time"><i class="far fa-clock"></i> 8 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-article">
+                            <div class="popular-article-content">
+                                <span class="popular-badge">3</span>
+                                <div class="article-details">
+                                    <span class="category-badge mental-health">Mental Health</span>
+                                    <h3><a href="mental-health-for-students.html">Managing Exam Stress: A Guide for Students and Parents</a></h3>
+                                    <div class="article-meta">
+                                        <span class="date"><i class="far fa-calendar-alt"></i> May 5, 2024</span>
+                                        <span class="reading-time"><i class="far fa-clock"></i> 7 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-article">
+                            <div class="popular-article-content">
+                                <span class="popular-badge">4</span>
+                                <div class="article-details">
+                                    <span class="category-badge time-management">Time Mgmt</span>
+                                    <h3><a href="study-schedule.html">How to Create the Perfect Study Schedule for Competitive Exams</a></h3>
+                                    <div class="article-meta">
+                                        <span class="date"><i class="far fa-calendar-alt"></i> April 28, 2024</span>
+                                        <span class="reading-time"><i class="far fa-clock"></i> 9 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Newsletter Subscription -->
+                <section class="newsletter-section">
+                    <div class="newsletter-container">
+                        <div class="newsletter-content">
+                            <h2>Stay Updated with Our Latest Articles</h2>
+                            <p>Subscribe to our newsletter and get study tips, exam strategies, and educational insights delivered to your inbox weekly.</p>
+                        </div>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <!-- About Widget -->
+                <div class="sidebar-widget about-widget">
+                    <h3 class="widget-title">About The Blog</h3>
+                    <div class="widget-content">
+                        <p>The Excel Coaching Blog provides valuable resources, study tips, and expert advice to help students excel in academics and competitive exams.</p>
+                        <a href="../about.html" class="read-more">Learn More About Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Search Widget -->
+                <div class="sidebar-widget search-widget">
+                    <h3 class="widget-title">Search Articles</h3>
+                    <div class="widget-content">
+                        <form action="./search.html" method="GET" class="sidebar-search">
+                            <input type="text" name="q" placeholder="Search...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="sidebar-widget categories-widget">
+                    <h3 class="widget-title">Categories</h3>
+                    <div class="widget-content">
+                        <ul class="categories-list">
+                            <li><a href="category/study-techniques.html">Study Techniques <span>12</span></a></li>
+                            <li><a href="category/exam-prep.html">Exam Preparation <span>9</span></a></li>
+                            <li><a href="category/time-management.html">Time Management <span>7</span></a></li>
+                            <li><a href="category/mental-health.html">Mental Health <span>5</span></a></li>
+                            <li><a href="category/career-guidance.html">Career Guidance <span>4</span></a></li>
+                            <li><a href="category/success-stories.html">Success Stories <span>8</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular Posts Widget -->
+                <div class="sidebar-widget popular-posts">
+                    <h3 class="widget-title">Popular Posts</h3>
+                    <div class="widget-content">
+                        <article class="popular-post">
+                            <div class="post-image">
+                                <a href="best-study-techniques.html">
+                                    <img src="../images/blog/study-thumb1.jpg" alt="Study Techniques">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <h4><a href="best-study-techniques.html">10 Scientifically Proven Study Techniques</a></h4>
+                                <span class="post-date">June 15, 2024</span>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-post">
+                            <div class="post-image">
+                                <a href="exam-preparation-tips.html">
+                                    <img src="../images/blog/exam-thumb1.jpg" alt="Exam Preparation">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <h4><a href="exam-preparation-tips.html">Ultimate Guide to Last-Minute Exam Prep</a></h4>
+                                <span class="post-date">June 10, 2024</span>
+                            </div>
+                        </article>
+                        
+                        <article class="popular-post">
+                            <div class="post-image">
+                                <a href="mental-health-for-students.html">
+                                    <img src="../images/blog/mental-health-thumb.jpg" alt="Mental Health">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <h4><a href="mental-health-for-students.html">Managing Exam Stress Effectively</a></h4>
+                                <span class="post-date">May 5, 2024</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Tags Widget -->
+                <div class="sidebar-widget tags-widget">
+                    <h3 class="widget-title">Tags</h3>
+                    <div class="widget-content">
+                        <div class="tags-container">
+                            <a href="tag/study-methods.html">Study Methods</a>
+                            <a href="tag/memory.html">Memory</a>
+                            <a href="tag/jee.html">JEE</a>
+                            <a href="tag/neet.html">NEET</a>
+                            <a href="tag/motivation.html">Motivation</a>
+                            <a href="tag/productivity.html">Productivity</a>
+                            <a href="tag/test-series.html">Test Series</a>
+                            <a href="tag/board-exams.html">Board Exams</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Widget -->
+                <div class="sidebar-widget ad-widget">
+                    <!-- AdSense Ad Unit -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                         data-ad-slot="YOUR_AD_SLOT_ID"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Ad Banner -->
+    <section class="ad-section">
+        <div class="container">
+            <!-- AdSense Ad Unit -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="../images/logo-white.png" alt="Excel Coaching Center Logo" class="footer-logo">
+                    <p class="footer-about-text">Excel Coaching Center is a premier educational institute dedicated to helping students achieve academic excellence through innovative teaching methods.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-nav">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="../about.html" class="footer-link">About Us</a></li>
+                        <li><a href="../courses.html" class="footer-link">Courses</a></li>
+                        <li><a href="../hall-of-fame.html" class="footer-link">Success Stories</a></li>
+                        <li><a href="./" class="footer-link">Blog</a></li>
+                        <li><a href="../contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-blog-links">
+                    <h3 class="footer-title">From The Blog</h3>
+                    <ul class="footer-blog-posts">
+                        <li><a href="best-study-techniques.html" class="footer-link">10 Proven Study Techniques</a></li>
+                        <li><a href="exam-preparation-tips.html" class="footer-link">Last-Minute Exam Prep Guide</a></li>
+                        <li><a href="time-management.html" class="footer-link">Mastering the Pomodoro Technique</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-contact">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <address class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i> 123 Excel Coaching Street, City, State 110092
+                    </address>
+                    <div class="footer-phone">
+                        <i class="fas fa-phone-alt"></i> <a href="tel:+911234567890">+91 12345 67890</a>
+                    </div>
+                    <div class="footer-email">
+                        <i class="fas fa-envelope"></i> <a href="mailto:info@excelcoaching.com">info@excelcoaching.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="../policies/privacy-policy.html" class="legal-link">Privacy Policy</a>
+                    <a href="../policies/terms-of-service.html" class="legal-link">Terms of Service</a>
+                    <a href="../policies/disclaimer.html" class="legal-link">Disclaimer</a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2024 Excel Coaching Center. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/blog.js"></script>
 </body>
 </html>

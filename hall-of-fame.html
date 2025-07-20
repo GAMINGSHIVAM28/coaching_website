@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall of Fame - Excel Coaching Center</title>
+    <meta name="description" content="Celebrating our top achievers who made us proud in competitive exams">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css for celebration effects -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Celebration animation styles */
+        .celebration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            overflow: hidden;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+        
+        /* Hall of Fame specific styles */
+        .trophy-icon {
+            font-size: 3rem;
+            color: gold;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255,215,0,0.7);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .student-card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .student-card:hover {
+            transform: translateY(-10px) rotateY(10deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .student-image {
+            border: 3px solid gold;
+            box-shadow: 0 0 20px rgba(255,215,0,0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .student-card:hover .student-image {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255,215,0,0.7);
+        }
+        
+        .rank-badge {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 50px;
+            height: 50px;
+            background: gold;
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: 0 0 10px rgba(255,215,0,0.7);
+            z-index: 1;
+        }
+        
+        .year-tab {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Celebration Animation Elements -->
+    <div class="celebration" id="celebration"></div>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html"><img src="images/logo.png" alt="Excel Coaching Logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="hall-of-fame.html" class="active">Success Stories</a></li>
+                    <li><a href="blog/">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hall of Fame Hero Section -->
+    <section class="hof-hero">
+        <div class="container">
+            <div class="trophy-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h1 class="animate__animated animate__fadeInDown">Hall of Fame</h1>
+            <p class="animate__animated animate__fadeInUp">Celebrating our brightest stars who made us proud</p>
+        </div>
+    </section>
+
+    <!-- Ad Banner -->
+    <section class="ad-section">
+        <div class="container">
+            <!-- AdSense Ad Unit -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
+
+    <!-- 2023-24 Batch -->
+    <section class="hof-section">
+        <div class="container">
+            <div class="year-tab animate__animated animate__zoomIn">
+                2023-24 Batch
+            </div>
+            <div class="students-grid">
+                <div class="student-card animate__animated animate__fadeInLeft">
+                    <div class="rank-badge">1</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper1.jpg" alt="AIR 12 JEE Advanced" class="student-image">
+                    </div>
+                    <h3>Rahul Sharma</h3>
+                    <p class="achievement">AIR 12 - JEE Advanced 2023</p>
+                    <p class="institute">IIT Bombay - Computer Science</p>
+                    <p class="quote">"Excel Coaching's problem-solving approach was key to my success"</p>
+                </div>
+                
+                <div class="student-card animate__animated animate__fadeInLeft animate__delay-1s">
+                    <div class="rank-badge">2</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper2.jpg" alt="AIR 23 JEE Advanced" class="student-image">
+                    </div>
+                    <h3>Priya Patel</h3>
+                    <p class="achievement">AIR 23 - JEE Advanced 2023</p>
+                    <p class="institute">IIT Delhi - Electrical Engineering</p>
+                    <p class="quote">"The faculty's guidance helped me improve my weak areas significantly"</p>
+                </div>
+                
+                <div class="student-card animate__animated animate__fadeInLeft animate__delay-2s">
+                    <div class="rank-badge">3</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper3.jpg" alt="AIR 45 NEET UG" class="student-image">
+                    </div>
+                    <h3>Arjun Mehta</h3>
+                    <p class="achievement">AIR 45 - NEET UG 2023</p>
+                    <p class="institute">AIIMS Delhi - MBBS</p>
+                    <p class="quote">"Biology classes with mnemonics made learning so much easier"</p>
+                </div>
+                
+                <div class="student-card animate__animated animate__fadeInLeft animate__delay-3s">
+                    <div class="rank-badge">4</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper4.jpg" alt="AIR 67 JEE Advanced" class="student-image">
+                    </div>
+                    <h3>Neha Gupta</h3>
+                    <p class="achievement">AIR 67 - JEE Advanced 2023</p>
+                    <p class="institute">IIT Madras - Mechanical Engineering</p>
+                    <p class="quote">"Regular test series built my exam temperament"</p>
+                </div>
+                
+                <div class="student-card animate__animated animate__fadeInLeft animate__delay-4s">
+                    <div class="rank-badge">5</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper5.jpg" alt="AIR 89 NEET UG" class="student-image">
+                    </div>
+                    <h3>Vikram Singh</h3>
+                    <p class="achievement">AIR 89 - NEET UG 2023</p>
+                    <p class="institute">Maulana Azad Medical College - MBBS</p>
+                    <p class="quote">"Personalized attention helped me overcome my weaknesses"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2022-23 Batch -->
+    <section class="hof-section alt-bg">
+        <div class="container">
+            <div class="year-tab animate__animated animate__zoomIn">
+                2022-23 Batch
+            </div>
+            <div class="students-grid">
+                <div class="student-card animate__animated animate__fadeInRight">
+                    <div class="rank-badge">1</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper6.jpg" alt="AIR 8 JEE Advanced" class="student-image">
+                    </div>
+                    <h3>Amit Kumar</h3>
+                    <p class="achievement">AIR 8 - JEE Advanced 2022</p>
+                    <p class="institute">IIT Kanpur - Computer Science</p>
+                    <p class="quote">"The advanced problem-solving techniques were game-changing"</p>
+                </div>
+                
+                <div class="student-card animate__animated animate__fadeInRight animate__delay-1s">
+                    <div class="rank-badge">2</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper7.jpg" alt="AIR 15 JEE Advanced" class="student-image">
+                    </div>
+                    <h3>Ananya Joshi</h3>
+                    <p class="achievement">AIR 15 - JEE Advanced 2022</p>
+                    <p class="institute">IIT Bombay - Electrical Engineering</p>
+                    <p class="quote">"Time management strategies helped me attempt all questions"</p>
+                </div>
+                
+                <div class="student-card animate__animated animate__fadeInRight animate__delay-2s">
+                    <div class="rank-badge">3</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper8.jpg" alt="AIR 32 NEET UG" class="student-image">
+                    </div>
+                    <h3>Rohit Verma</h3>
+                    <p class="achievement">AIR 32 - NEET UG 2022</p>
+                    <p class="institute">AIIMS Delhi - MBBS</p>
+                    <p class="quote">"Biology diagrams and mnemonics were incredibly helpful"</p>
+                </div>
+                
+                <div class="student-card animate__animated animate__fadeInRight animate__delay-3s">
+                    <div class="rank-badge">4</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper9.jpg" alt="AIR 54 JEE Advanced" class="student-image">
+                    </div>
+                    <h3>Divya Nair</h3>
+                    <p class="achievement">AIR 54 - JEE Advanced 2022</p>
+                    <p class="institute">IIT Delhi - Chemical Engineering</p>
+                    <p class="quote">"The faculty's approach to organic chemistry was exceptional"</p>
+                </div>
+                
+                <div class="student-card animate__animated animate__fadeInRight animate__delay-4s">
+                    <div class="rank-badge">5</div>
+                    <div class="student-image-container">
+                        <img src="images/students/topper10.jpg" alt="AIR 72 NEET UG" class="student-image">
+                    </div>
+                    <h3>Karan Malhotra</h3>
+                    <p class="achievement">AIR 72 - NEET UG 2022</p>
+                    <p class="institute">Lady Hardinge Medical College - MBBS</p>
+                    <p class="quote">"Regular tests helped me improve my accuracy"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>What our toppers say about their journey with us</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-video">
+                        <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>Rahul's Journey to IIT Bombay</h3>
+                        <p>"From struggling with physics to AIR 12, Excel Coaching transformed my approach..."</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-video">
+                        <iframe src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>Priya's NEET Success Story</h3>
+                        <p>"How focused biology classes helped me crack NEET with AIR 45..."</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-video">
+                        <iframe src="https://www.youtube.com/embed/example3" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>Arjun's Transformation</h3>
+                        <p>"From average student to IITian - my 2 year journey at Excel Coaching..."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section alt-bg">
+        <div class="container">
+            <h2>Be Our Next Success Story</h2>
+            <p>Join the institute that produces consistent results year after year</p>
+            <div class="cta-buttons">
+                <a href="courses.html" class="btn">Explore Courses</a>
+                <a href="contact.html" class="btn btn-outline">Free Counseling</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="images/logo-white.png" alt="Excel Coaching Logo" class="footer-logo">
+                    <p>Transforming education through innovative teaching methodologies since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="hall-of-fame.html">Success Stories</a></li>
+                        <li><a href="blog/">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">JEE Main & Advanced</a></li>
+                        <li><a href="#">NEET UG</a></li>
+                        <li><a href="#">Class 11-12 (Science)</a></li>
+                        <li><a href="#">Class 9-10 (Foundation)</a></li>
+                        <li><a href="#">NTSE & Olympiads</a></li>
+                        <li><a href="#">GATE & ESE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education St, Learning District, City - 110092</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-envelope"></i> info@excelcoaching.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Excel Coaching Center. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="policies/privacy-policy.html">Privacy Policy</a>
+                    <a href="policies/terms-of-service.html">Terms of Service</a>
+                    <a href="policies/disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Create celebration confetti
+        function createConfetti() {
+            const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff'];
+            const celebration = document.getElementById('celebration');
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                celebration.appendChild(confetti);
+            }
+        }
+        
+        // Initialize celebration when page loads
+        window.addEventListener('load', function() {
+            createConfetti();
+            
+            // Remove confetti after 10 seconds
+            setTimeout(function() {
+                document.getElementById('celebration').style.display = 'none';
+            }, 10000);
+        });
+        
+        // Recreate confetti when scrolling to hall of fame section
+        let celebrationPlayed = false;
+        window.addEventListener('scroll', function() {
+            const hofSection = document.querySelector('.hof-section');
+            const position = hofSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 2;
+            
+            if(position < screenPosition && !celebrationPlayed) {
+                document.getElementById('celebration').style.display = 'block';
+                createConfetti();
+                celebrationPlayed = true;
+                
+                setTimeout(function() {
+                    document.getElementById('celebration').style.display = 'none';
+                }, 10000);
+            }
+        });
+        
+        // Initialize AdSense
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

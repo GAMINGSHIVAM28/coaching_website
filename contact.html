@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Excel Coaching Center - Get in Touch for Academic Success</title>
+    <meta name="description" content="Contact Excel Coaching Center for course inquiries, support, and academic guidance. We're here to help you achieve your educational goals." />
+    <meta name="keywords" content="coaching contact, education support, academic help, course inquiry, Excel Coaching" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="sticky-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Excel Coaching Center Logo" class="logo" width="180" height="50" />
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li class="nav-item"><a href="hall-of-fame.html" class="nav-link">Success Stories</a></li>
+                    <li class="nav-item"><a href="blog/" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" aria-label="Mobile menu toggle" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Get in Touch With Us</h1>
+                <p class="hero-subtitle">We're here to help you on your academic journey. Reach out for inquiries, support, or guidance.</p>
+                <div class="hero-cta">
+                    <a href="#contact-form" class="btn btn-primary scroll-to-form">
+                        <i class="fas fa-envelope"></i> Send a Message
+                    </a>
+                    <a href="tel:+911234567890" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="contact-form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Send Us a Message</h2>
+                <p class="section-description">Fill out the form below and we'll get back to you within 24 hours.</p>
+            </div>
+            
+            <form id="contactForm" class="contact-form" action="/submit-contact" method="POST" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" class="form-input" required placeholder="Enter your full name" />
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" class="form-input" required placeholder="Enter your email address" />
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject <span class="required">*</span></label>
+                        <select id="subject" name="subject" class="form-select" required>
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="admission">Admission Inquiry</option>
+                            <option value="course">Course Information</option>
+                            <option value="feedback">Feedback/Suggestion</option>
+                            <option value="support">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" id="subject-error"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Your Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Type your message here..."></textarea>
+                    <div class="error-message" id="message-error"></div>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-submit">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                    </button>
+                    <div class="form-note">Fields marked with <span class="required">*</span> are required</div>
+                </div>
+                
+                <div id="form-success" class="form-success-message">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <p>Thank you! Your message has been sent successfully. We'll contact you soon.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section class="contact-details-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="contact-title">Our Location</h3>
+                    <address class="contact-info">
+                        123 Excel Coaching Street<br>
+                        Education District<br>
+                        City, State 110092<br>
+                        India
+                    </address>
+                    <a href="https://maps.google.com/?q=123+Excel+Coaching+Street" class="contact-link" target="_blank" rel="noopener">
+                        View on Google Maps <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="contact-title">Call Us</h3>
+                    <div class="contact-info">
+                        <p>Admissions: <a href="tel:+911234567891">+91 12345 67891</a></p>
+                        <p>Support: <a href="tel:+911234567892">+91 12345 67892</a></p>
+                        <p>General: <a href="tel:+911234567890">+91 12345 67890</a></p>
+                    </div>
+                    <div class="contact-hours">
+                        <p><strong>Hours:</strong> Mon-Sat, 9AM to 6PM</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-title">Email Us</h3>
+                    <div class="contact-info">
+                        <p>Admissions: <a href="mailto:admissions@excelcoaching.com">admissions@excelcoaching.com</a></p>
+                        <p>Support: <a href="mailto:support@excelcoaching.com">support@excelcoaching.com</a></p>
+                        <p>General: <a href="mailto:info@excelcoaching.com">info@excelcoaching.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Us on Map</h2>
+            <div id="googleMap" class="google-map"></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Quick answers to common questions about contacting us</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                        What are your office hours?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div id="faq1" class="faq-answer">
+                        <p>Our office is open Monday through Saturday from 9:00 AM to 6:00 PM. We're closed on Sundays and public holidays.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                        How soon can I expect a response to my inquiry?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div id="faq2" class="faq-answer">
+                        <p>We typically respond to all inquiries within 24 hours during business days. For urgent matters, please call our support line.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                        Do you offer in-person counseling sessions?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div id="faq3" class="faq-answer">
+                        <p>Yes, we offer free in-person counseling sessions by appointment. Please call our admissions office to schedule a meeting with our academic counselor.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+                        What information should I include in my message?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div id="faq4" class="faq-answer">
+                        <p>Please include your name, contact details, the course you're interested in (if applicable), and specific questions or concerns you'd like addressed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Section -->
+    <section class="ad-section">
+        <div class="container">
+            <!-- AdSense Ad Unit -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Your Academic Journey?</h2>
+                <p class="cta-description">Contact us today to learn more about our courses and how we can help you achieve your goals.</p>
+                <div class="cta-buttons">
+                    <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+                    <a href="tel:+911234567890" class="btn btn-secondary">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="images/logo-white.png" alt="Excel Coaching Center Logo" class="footer-logo" width="180" height="50" />
+                    <p class="footer-about-text">Excel Coaching Center is a premier educational institute dedicated to helping students achieve academic excellence through innovative teaching methods.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="courses.html" class="footer-link">Courses</a></li>
+                        <li><a href="hall-of-fame.html" class="footer-link">Success Stories</a></li>
+                        <li><a href="blog/" class="footer-link">Blog</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-contact">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <address class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i> 123 Excel Coaching Street, City, State 110092
+                    </address>
+                    <div class="footer-phone">
+                        <i class="fas fa-phone-alt"></i> <a href="tel:+911234567890">+91 12345 67890</a>
+                    </div>
+                    <div class="footer-email">
+                        <i class="fas fa-envelope"></i> <a href="mailto:info@excelcoaching.com">info@excelcoaching.com</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-newsletter">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p class="newsletter-text">Subscribe to get updates on courses, events, and study tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required class="newsletter-input" />
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="policies/privacy-policy.html" class="legal-link">Privacy Policy</a>
+                    <a href="policies/terms-of-service.html" class="legal-link">Terms of Service</a>
+                    <a href="policies/disclaimer.html" class="legal-link">Disclaimer</a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2024 Excel Coaching Center. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,89 +1,70 @@
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu functionality
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-    const body = document.body;
-    
-    // Toggle menu function
-    function toggleMenu() {
-        menuToggle.classList.toggle('active');
-        nav.classList.toggle('active');
-        body.classList.toggle('menu-open');
-    }
-    
-    // Event listeners
-    menuToggle.addEventListener('click', toggleMenu);
-    
-    // Close menu when clicking on nav links (mobile only)
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', function() {
-            if(window.innerWidth <= 767.98) {
-                toggleMenu();
-            }
-        });
-    });
-    // Mobile Menu Functionality
-document.addEventListener('DOMContentLoaded', function() {
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     const body = document.body;
 
+    // Initialize ARIA attributes for accessibility
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Toggle navigation menu');
+
+    // Toggle menu
     function toggleMenu() {
-        menuToggle.classList.toggle('active');
+        const isActive = menuToggle.classList.toggle('active');
         nav.classList.toggle('active');
         body.classList.toggle('menu-open');
+        menuToggle.setAttribute('aria-expanded', isActive);
     }
 
-    // Toggle menu on button click
-    menuToggle.addEventListener('click', function(e) {
+    // Event: Toggle menu on click
+    menuToggle.addEventListener('click', function (e) {
         e.stopPropagation();
         toggleMenu();
     });
 
-    // Close menu when clicking on nav links
+    // Event: Close menu on nav link click (only on mobile)
     document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', function() {
-            if(window.innerWidth <= 767.98) {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 767.98) {
                 toggleMenu();
             }
         });
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if(window.innerWidth <= 767.98 && 
-           nav.classList.contains('active') &&
-           !e.target.closest('nav') && 
-           !e.target.closest('.menu-toggle')) {
+    // Event: Close menu when clicking outside (mobile only)
+    document.addEventListener('click', function (e) {
+        if (
+            window.innerWidth <= 767.98 &&
+            nav.classList.contains('active') &&
+            !e.target.closest('nav') &&
+            !e.target.closest('.menu-toggle')
+        ) {
             toggleMenu();
         }
     });
 
-    // Reset menu on window resize
-    window.addEventListener('resize', function() {
-        if(window.innerWidth > 767.98 && nav.classList.contains('active')) {
+    // Event: Close mobile menu if resizing to desktop
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 767.98 && nav.classList.contains('active')) {
             toggleMenu();
         }
     });
-});
-    // Close menu when clicking outside (mobile only)
-    document.addEventListener('click', function(e) {
-        if(window.innerWidth <= 767.98 && 
-           nav.classList.contains('active') &&
-           !e.target.closest('nav') && 
-           !e.target.closest('.menu-toggle')) {
-            toggleMenu();
-        }
+
+    // Smooth scroll for internal anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     });
-    
-    // Reset menu on window resize
-    window.addEventListener('resize', function() {
-        if(window.innerWidth > 767.98 && nav.classList.contains('active')) {
-            toggleMenu();
-        }
-    });
-    
-    // Additional functions can be added below
-    // ...
+
+    // Lazy-load AdSense (if present)
+    if (typeof adsbygoogle !== 'undefined') {
+        document.addEventListener('click', function () {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        }, { once: true });
+    }
 });

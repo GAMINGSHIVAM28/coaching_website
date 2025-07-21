@@ -1,3 +1,4 @@
+
 // Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');

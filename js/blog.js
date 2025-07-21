@@ -1,87 +1,56 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AdSense
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    
-    // Back to Top Button
-    const backToTopButton = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('visible');
-        } else {
-            backToTopButton.classList.remove('visible');
-        }
-    });
-    
-    backToTopButton.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.main-nav');
-    
-    menuToggle.addEventListener('click', function() {
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !isExpanded);
-        nav.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on nav links (mobile)
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 991.98) {
-                menuToggle.setAttribute('aria-expanded', 'false');
-                nav.classList.remove('active');
+    // Search functionality
+    const searchForm = document.querySelector('.search-box');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchInput = this.querySelector('.search-input');
+            if (searchInput.value.trim() !== '') {
+                // In a real implementation, you would submit the search
+                alert('Searching for: ' + searchInput.value);
+                // window.location.href = '/search?q=' + encodeURIComponent(searchInput.value);
             }
         });
-    });
-    
-    // Newsletter Form Submission
+    }
+
+    // Newsletter form
     const newsletterForm = document.querySelector('.newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const emailInput = this.querySelector('input[type="email"]');
-            
-            // Simple validation
-            if (emailInput.value.trim() === '' || !emailInput.value.includes('@')) {
-                emailInput.style.borderColor = '#e74c3c';
-                return;
+            if (emailInput.value.trim() !== '') {
+                // In a real implementation, you would submit the form
+                alert('Thank you for subscribing with: ' + emailInput.value);
+                emailInput.value = '';
+                // Example AJAX submission:
+                // fetch('/subscribe', {
+                //     method: 'POST',
+                //     body: JSON.stringify({ email: emailInput.value }),
+                //     headers: { 'Content-Type': 'application/json' }
+                // }).then(...)
             }
-            
-            // In a real implementation, you would submit the form here
-            // For demo purposes, we'll just show an alert
-            alert('Thank you for subscribing to our newsletter!');
-            this.reset();
         });
     }
-    
-    // Search Form Submission
-    const searchForms = document.querySelectorAll('.search-form, .sidebar-search');
-    searchForms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            const searchInput = this.querySelector('input[type="text"]');
-            if (searchInput.value.trim() === '') {
-                e.preventDefault();
-                searchInput.style.borderColor = '#e74c3c';
-                setTimeout(() => {
-                    searchInput.style.borderColor = '';
-                }, 2000);
+
+    // Back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
             }
         });
-    });
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-    });
+    }
+
+    // Initialize AdSense
+    if (typeof adsbygoogle !== 'undefined') {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    }
 });

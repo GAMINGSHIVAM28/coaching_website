@@ -1083,4 +1083,91 @@
     .page-numbers.next {
         padding: 0 10px;
     }
+
+    /* Extra mobile blog enhancements */
+    .toc-wrapper {
+        padding: 15px;
+        font-size: 0.98rem;
+    }
+    .toc-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    .toc-list {
+        padding-left: 18px;
+    }
+    .strategy-card {
+        padding: 15px 10px;
+        margin-bottom: 25px;
+    }
+    .featured-image img,
+    .related-card img {
+        height: 140px !important;
+        object-fit: cover;
+    }
+    .author-bio {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .author-bio img {
+        width: 70px;
+        height: 70px;
+    }
+    .comments .comment-form textarea {
+        min-height: 70px;
+        font-size: 1rem;
+    }
+    .sidebar {
+        margin-top: 30px;
+    }
+    .widget {
+        padding: 15px 10px;
+    }
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .related-card h3 {
+        font-size: 1rem;
+    }
+    .cta-box {
+        padding: 12px 10px;
+        font-size: 1rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .site-footer {
+        padding: 25px 0;
+    }
+    .back-to-top {
+        right: 10px;
+        bottom: 10px;
+        width: 38px;
+        height: 38px;
+        font-size: 1.2rem;
+    }
+
+    /* Style tags and classes for mobile */
+    .tags,
+    .tags-container {
+        gap: 6px;
+        margin-top: 20px;
+        padding-left: 0;
+    }
+    .tags a,
+    .tags-container a {
+        font-size: 0.85rem;
+        padding: 4px 10px;
+        border-radius: 16px;
+    }
+    .tags a {
+        margin-bottom: 6px;
+    }
+    .tags-container {
+        margin-bottom: 10px;
+    }
 }
